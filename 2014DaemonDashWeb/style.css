@@ -1,0 +1,264 @@
+img{
+	width: 250px;
+	height: 250px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+iframe{
+	
+	width: 500px;
+	height: 500px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 30px;
+	background-image: url('https://g.twimg.com/Twitter_logo_blue.png');
+	
+	background-size: 100%;
+ }
+
+
+.parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+
+ body, html {
+    overflow: hidden;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 200%;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+    
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+   /*IG pic */
+  #group1 .parallax__layer--base {
+	background-image: url('http://i.imgur.com/tDiSmix.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center; 
+   	font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+	font-size: 200px;	
+  }
+
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+	 font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+   /*Road*/
+  #group2 .parallax__layer--back {
+    background-image: url('http://photos-a.ak.instagram.com/hphotos-ak-xpa1/10354520_1407566699524352_986823101_n.jpg');
+	background-size: 120%;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+	
+  }
+
+  #group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+	 font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: red;
+  }
+  /*RTC Cans img*/
+  #group3 .parallax__layer--base {
+    background-image:url('http://i.imgur.com/ohnIw9J.jpg');
+	background-size: 100%;
+	font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+	 font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+  
+  /*MD Flag 2 */
+  #group4 .parallax__layer--deep {
+    background-image: url('http://i.imgur.com/FCbQwf2.jpg');
+	font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+  /*rain*/
+  #group4 .parallax__layer--back {
+	background-image: url('http://img2.wikia.nocookie.net/__cb20120407173359/mlp/images/f/f7/PonyMaker_Drops.png');
+	background-size: 60%;
+	font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+ 
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+	font-family: Verdana;
+	font-style: bold;
+	text-align:left;
+	color: black;
+  }
+  /*Map img*/
+  #group5 .parallax__layer--base {
+    background-image: url('http://i.imgur.com/0x8ulxm.jpg');
+	background-size: 130%;
+	font-family: Verdana;
+	font-style: bold;
+	text-align:left;
+	color: black;
+  }
+
+  #group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+	/**/
+	 background-size: 50%;
+	 background-no-repeat: 
+	 font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+  /*MD Flag 3 */
+  #group6 .parallax__layer--back {
+    background-image: url('http://i.imgur.com/FCbQwf2.jpg');
+	font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+
+  #group7 {
+    z-index: 3; /* slide over group 7 */
+	 font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+  /*UMD Recycle logo*/
+  #group7 .parallax__layer--base {
+    background-image: url('http://i.imgur.com/PNsmrgR.jpg');
+	background-size: 100%;
+	font-family: Verdana;
+	font-style: bold;
+	text-align:center;
+	color: white;
+  }
+  #trash{
+	width: 10em;  height: 10em; 
+	background: url('http://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Recycling_symbol.svg/220px-Recycling_symbol.svg.png') no-repeat left;
+	background-size: 100%;
+	color: white;
+	font-weight: bold;
+	font-size:30px;
+	border:none;
+  }
+  #recycle{
+	width: 10em;  height: 10em; 
+	background: url('http://www.clker.com/cliparts/i/I/o/a/D/t/recycle-symbol-hi.png') no-repeat left;
+	background-size: 100%;
+	color: white;
+	font-weight: bold;
+	font-size:30px;
+	border:none;
+  }
+  #compost{
+	width: 10em;  height: 10em; 
+	background: url('http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Recycle001.svg/1085px-Recycle001.svg.png') no-repeat left;
+	background-size: 100%;
+	color: white;
+	font-weight: bold;
+	font-size:30px;
+	border:none;
+  }
+
+ 
+ 
